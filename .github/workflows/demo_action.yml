@@ -1,6 +1,3 @@
-Here's your GitHub Actions workflow script reframed for better structure and clarity:
-
-```yaml
 name: Demo
 on:
   push:
