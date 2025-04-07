@@ -5,8 +5,8 @@ on:
     branches: [main]
 
 jobs:
-  build:
-    runs-on: windows-latest
+runs-on: windows-latest
+  build:    
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -14,4 +14,12 @@ jobs:
       - name: Run PowerShell command
         run: |
           Write-Output "Run command executed"
-        
+
+  test:    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run PowerShell command
+        run: |
+          Write-Output "test executed"   
