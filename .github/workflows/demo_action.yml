@@ -16,7 +16,7 @@ jobs:
         shell: pwsh
 
   test:
-    needs:build
+    needs: build
     runs-on: windows-latest
     steps:
       - name: Checkout code
