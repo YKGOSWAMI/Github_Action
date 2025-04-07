@@ -1,12 +1,14 @@
+Here's your GitHub Actions workflow script reframed for better structure and clarity:
 
+```yaml
 name: Demo
 on:
   push:
     branches: [main]
 
 jobs:
-  runs-on: windows-latest
-  build:    
+  build:
+    runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -14,12 +16,15 @@ jobs:
       - name: Run PowerShell command
         run: |
           Write-Output "Run command executed"
+        shell: pwsh
 
-  test:    
+  test:
+    runs-on: windows-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Run PowerShell command
         run: |
-          Write-Output "test executed"   
+          Write-Output "test executed"
+      
